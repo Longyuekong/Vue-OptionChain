@@ -1,32 +1,39 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-    <button @click="testOption">点我测试</button>
+    <h1 v-if="useOptionChain(arr)['0?.obj?.a?.b']">数组对象</h1>
+    <h1 v-if="useOptionChain(obj)['arr?.0?.a']">对象数组</h1>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import useOptionChain from "@/utils";
 
 export default {
   name: "App",
-  components: {
-    HelloWorld,
-  },
+  components: {},
   data() {
     return {
-      a: {
-        b: {
-          c: "1",
+      arr: [
+        {
+          obj: {
+            a: {
+              b: "数组对象",
+            },
+          },
         },
+      ],
+      obj: {
+        arr: [
+          {
+            a: "对象数组",
+          },
+        ],
       },
     };
   },
   methods: {
-    testOption() {
-      alert(this.a?.b?.c);
-    },
+    useOptionChain,
   },
 };
 </script>
