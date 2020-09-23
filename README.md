@@ -1,14 +1,16 @@
 
-# Vue-OptionChain
 
-# cd optionchain 
+#  进入项目
+```
+cd optionchain 
+```
 
-## Project setup
+## 安装依赖
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 启动服务
 ```
 npm run serve
 ```
