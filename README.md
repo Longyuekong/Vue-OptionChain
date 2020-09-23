@@ -1,3 +1,14 @@
+
 # Vue-OptionChain
-Vue项目中支持可选链
-## Option-chain
+
+# cd optionchain 
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
